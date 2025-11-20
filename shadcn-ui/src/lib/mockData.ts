@@ -1,4 +1,6 @@
-// Mock data para desenvolvimento - Substituir por APIs reais no futuro
+// >>> ARQUIVO DE DADOS MOCKADOS
+// Este arquivo contém dados de exemplo para desenvolvimento.
+// Substitua com APIs reais quando estiver pronto para produção.
 
 export interface Student {
   id: string;
@@ -32,7 +34,12 @@ export interface TeamMember {
   imageUrl: string;
 }
 
-// Dados mockados do aluno
+// >>> DADOS DO ALUNO
+// Para editar: altere os valores abaixo
+// name: Nome do aluno
+// rm: Número de RM
+// course: Curso do aluno
+// grade: Série/Módulo do aluno
 export const mockStudent: Student = {
   id: '1',
   name: 'João Silva',
@@ -43,7 +50,8 @@ export const mockStudent: Student = {
   profilePicture: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John'
 };
 
-// Dados de uso mensal
+// >>> DADOS DE USO MENSAL
+// Para editar: altere sessions (número de sessões) e averageScore (nota média)
 export const mockMonthlyUsage: MonthlyUsage[] = [
   { month: 'Jan', sessions: 3, averageScore: 7.5 },
   { month: 'Fev', sessions: 5, averageScore: 7.8 },
@@ -53,7 +61,16 @@ export const mockMonthlyUsage: MonthlyUsage[] = [
   { month: 'Jun', sessions: 5, averageScore: 8.3 }
 ];
 
-// Artigos educativos
+// >>> ARTIGOS EDUCATIVOS
+// Para adicionar novo artigo:
+// {
+//   id: 'número único',
+//   title: 'Título do artigo',
+//   category: 'Categoria',
+//   description: 'Descrição breve',
+//   imageUrl: 'https://link-da-imagem.jpg',
+//   videoUrl: 'https://youtube.com/watch?v=xxxxx' (opcional)
+// }
 export const mockArticles: Article[] = [
   {
     id: '1',
@@ -101,7 +118,29 @@ export const mockArticles: Article[] = [
   }
 ];
 
-// Equipe de desenvolvimento
+// >>> EQUIPE DE DESENVOLVIMENTO
+// PARA EDITAR OS MEMBROS DA EQUIPE:
+// 
+// 1. NOME DO MEMBRO - Edite o campo 'name'
+//    Exemplo: name: 'Seu Nome Aqui'
+//
+// 2. CARGO/FUNÇÃO - Edite o campo 'role'
+//    Exemplo: role: 'Seu Cargo Aqui'
+//
+// 3. IMAGEM DO MEMBRO - Edite o campo 'imageUrl'
+//    a) Coloque a foto em /public/assets/ ou /public/assets/team/
+//    b) Atualize o path abaixo
+//    Exemplo: imageUrl: '/assets/seu-nome.jpg'
+//
+// 4. PARA ADICIONAR NOVO MEMBRO:
+//    Copie o objeto abaixo e substitua os valores
+//    {
+//      id: '9',
+//      name: 'Novo Membro',
+//      role: 'Cargo do Membro',
+//      imageUrl: '/assets/novo-membro.jpg'
+//    }
+//
 export const mockTeamMembers: TeamMember[] = [
   {
     id: '1',
@@ -129,7 +168,7 @@ export const mockTeamMembers: TeamMember[] = [
   },
   {
     id: '5',
-    name: 'Oitavo Dodói',
+    name: 'Octavio Godoy',
     role: 'Designer/Dev FrontEnd',
     imageUrl: 'public/assets/octavio.jpeg'
   },
@@ -153,7 +192,8 @@ export const mockTeamMembers: TeamMember[] = [
   }
 ];
 
-// Estrutura para futuras APIs
+// >>> ENDPOINTS DE API
+// Estrutura para futuras APIs - Configure com URLs reais quando estiver pronto
 export const API_ENDPOINTS = {
   // Microsoft OAuth
   MICROSOFT_AUTH: '/api/auth/microsoft',

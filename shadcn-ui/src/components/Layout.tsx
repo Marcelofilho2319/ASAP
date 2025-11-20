@@ -51,11 +51,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#e6f4f7] dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Header */}
-      <header className="bg-[#1f8d50] dark:bg-gray-800 text-white shadow-lg transition-colors duration-300">
+      <header className="bg-emerald-500 dark:bg-emerald-700 text-white shadow-lg transition-colors duration-300">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
+            {/* >>> ALTERE AQUI o logo do projeto
+               Arquivo localizado em /public/img/ASAP /images/
+               Para trocar: substitua a imagem ASAPETEC.jpg */}
             <Link to="/" className="flex items-center gap-3">
               <img 
                 src="/img/ASAP /images/ASAPETEC.jpg" 
@@ -65,7 +68,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <h1 className="text-xl md:text-2xl font-bold">ASAP - Psicologia ETEC</h1>
+              <h1 className="text-xl md:text-2xl font-bold text-white">ASAP - Psicologia ETEC</h1>
             </Link>
 
             {/* Desktop Navigation */}
@@ -74,8 +77,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`font-semibold hover:text-green-200 transition-colors ${
-                    location.pathname === item.path ? 'text-green-200 underline' : ''
+                  className={`font-semibold transition-colors ${
+                    location.pathname === item.path 
+                      ? 'text-emerald-100 underline' 
+                      : 'text-white hover:text-emerald-100'
                   }`}
                 >
                   {item.label}
@@ -85,7 +90,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsDark(!isDark)}
-                className="text-white hover:bg-green-700"
+                className="text-white hover:bg-emerald-600 dark:hover:bg-emerald-600"
               >
                 {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
@@ -97,7 +102,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsDark(!isDark)}
-                className="text-white hover:bg-green-700"
+                className="text-white hover:bg-emerald-600 dark:hover:bg-emerald-600"
               >
                 {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
@@ -105,7 +110,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white hover:bg-green-700"
+                className="text-white hover:bg-emerald-600 dark:hover:bg-emerald-600"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
@@ -120,8 +125,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMenuOpen(false)}
-                  className={`font-semibold hover:text-green-200 transition-colors py-2 ${
-                    location.pathname === item.path ? 'text-green-200 underline' : ''
+                  className={`font-semibold transition-colors py-2 ${
+                    location.pathname === item.path 
+                      ? 'text-emerald-100 underline' 
+                      : 'text-white hover:text-emerald-100'
                   }`}
                 >
                   {item.label}
@@ -140,15 +147,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       {/* Footer */}
       <footer className="bg-gray-800 dark:bg-gray-950 text-white py-6 relative overflow-hidden transition-colors duration-300">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm md:text-base">
+          <p className="text-sm md:text-base text-gray-100 dark:text-gray-300">
             &copy; 2025 ASAP - Apoio Sistêmico Acadêmico Psicológico ETEC - Todos os direitos reservados.
           </p>
-          <p className="text-xs mt-2 text-gray-400">
+          <p className="text-xs mt-2 text-gray-400 dark:text-gray-500">
             Plataforma de auxílio psicológico e denúncias para alunos da rede ETEC
           </p>
         </div>
         
-        {/* Ornitorrinco andando */}
+        {/* >>> ALTERE AQUI a imagem do ornitorrinco
+           Arquivo localizado em /public/img/
+           Arquivo padrão: ornitorrinco-andando.gif */}
         <img
           src="/img/ornitorrinco-andando.gif"
           alt="Ornitorrinco andando"
