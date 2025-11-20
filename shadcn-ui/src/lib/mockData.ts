@@ -42,9 +42,9 @@ export interface TeamMember {
 // grade: Série/Módulo do aluno
 export const mockStudent: Student = {
   id: '1',
-  name: 'João Silva',
+  name: 'João Silva (EXEMPLO)',
   rm: '12345',
-  course: 'Desenvolvimento de Sistemas',
+  course: 'Informática',
   grade: '3º Módulo',
   email: 'joao.silva@etec.sp.gov.br',
   profilePicture: 'https://api.dicebear.com/7.x/avataaars/svg?seed=John'
@@ -118,29 +118,8 @@ export const mockArticles: Article[] = [
   }
 ];
 
-// >>> EQUIPE DE DESENVOLVIMENTO
-// PARA EDITAR OS MEMBROS DA EQUIPE:
-// 
-// 1. NOME DO MEMBRO - Edite o campo 'name'
-//    Exemplo: name: 'Seu Nome Aqui'
-//
-// 2. CARGO/FUNÇÃO - Edite o campo 'role'
-//    Exemplo: role: 'Seu Cargo Aqui'
-//
-// 3. IMAGEM DO MEMBRO - Edite o campo 'imageUrl'
-//    a) Coloque a foto em /public/assets/ ou /public/assets/team/
-//    b) Atualize o path abaixo
-//    Exemplo: imageUrl: '/assets/seu-nome.jpg'
-//
-// 4. PARA ADICIONAR NOVO MEMBRO:
-//    Copie o objeto abaixo e substitua os valores
-//    {
-//      id: '9',
-//      name: 'Novo Membro',
-//      role: 'Cargo do Membro',
-//      imageUrl: '/assets/novo-membro.jpg'
-//    }
-//
+
+// >>> MEMBROS DA EQUIPE
 export const mockTeamMembers: TeamMember[] = [
   {
     id: '1',
@@ -156,13 +135,13 @@ export const mockTeamMembers: TeamMember[] = [
   },
   {
     id: '3',
-    name: 'Lucas Oliveira',
+    name: 'Lucas de Oliveira',
     role: 'Documentação',
     imageUrl: 'public/assets/lucas.jpeg'
   },
   {
     id: '4',
-    name: 'Isabelly Silva',
+    name: 'Isabelly Souza',
     role: 'Design e pesquisas',
     imageUrl: 'public/assets/isabelly.jpeg'
   },
