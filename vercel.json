@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "cd shadcn-ui && npm install --legacy-peer-deps && npm run build",
+  "outputDirectory": "shadcn-ui/dist",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "shadcn-ui/dist/index.html"
+    }
+  ]
+}
