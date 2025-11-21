@@ -53,7 +53,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex flex-col bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Header */}
-      <header className="bg-emerald-500 dark:bg-emerald-700 text-white shadow-lg transition-colors duration-300">
+      <header className="bg-teal-600 dark:bg-teal-800 text-white shadow-lg transition-colors duration-300">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             {/* >>> ALTERE AQUI o logo do projeto
@@ -79,8 +79,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   to={item.path}
                   className={`font-semibold transition-colors ${
                     location.pathname === item.path 
-                      ? 'text-emerald-100 underline' 
-                      : 'text-white hover:text-emerald-100'
+                      ? 'text-teal-100 underline' 
+                      : 'text-white hover:text-teal-100'
                   }`}
                 >
                   {item.label}
@@ -90,7 +90,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsDark(!isDark)}
-                className="text-white hover:bg-emerald-600 dark:hover:bg-emerald-600"
+                className="text-white hover:bg-teal-700 dark:hover:bg-teal-700"
               >
                 {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
@@ -102,7 +102,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsDark(!isDark)}
-                className="text-white hover:bg-emerald-600 dark:hover:bg-emerald-600"
+                className="text-white hover:bg-teal-700 dark:hover:bg-teal-700"
               >
                 {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
               </Button>
@@ -110,7 +110,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 variant="ghost"
                 size="icon"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white hover:bg-emerald-600 dark:hover:bg-emerald-600"
+                className="text-white hover:bg-teal-700 dark:hover:bg-teal-700"
               >
                 {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </Button>
@@ -127,8 +127,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   onClick={() => setIsMenuOpen(false)}
                   className={`font-semibold transition-colors py-2 ${
                     location.pathname === item.path 
-                      ? 'text-emerald-100 underline' 
-                      : 'text-white hover:text-emerald-100'
+                      ? 'text-teal-100 underline' 
+                      : 'text-white hover:text-teal-100'
                   }`}
                 >
                   {item.label}

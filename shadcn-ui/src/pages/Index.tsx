@@ -6,22 +6,22 @@ import { Heart, MessageCircle, Shield, BookOpen, Users, ArrowRight } from 'lucid
 export default function Index() {
   const features = [
     {
-      icon: <MessageCircle className="h-8 w-8 text-emerald-500 dark:text-emerald-400 transition-colors duration-300" />,
+      icon: <MessageCircle className="h-8 w-8 text-teal-600 dark:text-teal-400 transition-colors duration-300" />,
       title: 'Chatbot Dr. Doug',
       description: 'Converse com nosso ornitorrinco psicólogo, sempre empático e atencioso.'
     },
     {
-      icon: <Shield className="h-8 w-8 text-emerald-500 dark:text-emerald-400 transition-colors duration-300" />,
+      icon: <Shield className="h-8 w-8 text-teal-600 dark:text-teal-400 transition-colors duration-300" />,
       title: 'Sistema de Denúncias',
       description: 'Reporte casos de bullying, assédio e outras situações de forma segura.'
     },
     {
-      icon: <BookOpen className="h-8 w-8 text-emerald-500 dark:text-emerald-400 transition-colors duration-300" />,
+      icon: <BookOpen className="h-8 w-8 text-teal-600 dark:text-teal-400 transition-colors duration-300" />,
       title: 'Conteúdo Educativo',
       description: 'Artigos e vídeos sobre psicologia, bem-estar e autocuidado.'
     },
     {
-      icon: <Users className="h-8 w-8 text-emerald-500 dark:text-emerald-400 transition-colors duration-300" />,
+      icon: <Users className="h-8 w-8 text-teal-600 dark:text-teal-400 transition-colors duration-300" />,
       title: 'Atendimento Especializado',
       description: 'Triagem com coordenação e encaminhamento para psicólogos quando necessário.'
     }
@@ -30,13 +30,13 @@ export default function Index() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-emerald-500 to-emerald-600 dark:from-emerald-700 dark:to-emerald-800 text-white py-20 md:py-32 transition-colors duration-300">
+      <section className="relative bg-gradient-to-br from-teal-600 to-teal-700 dark:from-teal-800 dark:to-teal-900 text-white py-20 md:py-32 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-in fade-in slide-in-from-bottom-8 duration-700 text-white">
               Bem-vindo ao ASAP
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-emerald-100 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150 transition-colors duration-300">
+            <p className="text-xl md:text-2xl mb-8 text-teal-100 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-150 transition-colors duration-300">
               Apoio Sistêmico Acadêmico Psicológico
             </p>
             <p className="text-lg md:text-xl mb-10 text-white animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
@@ -45,13 +45,13 @@ export default function Index() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
               <Link to="/login">
-                <Button size="lg" className="bg-white text-emerald-600 hover:bg-emerald-50 dark:text-emerald-700 font-bold text-lg px-8 transition-colors duration-300">
+                <Button size="lg" className="bg-white text-teal-700 hover:bg-teal-50 dark:text-teal-600 font-bold text-lg px-8 transition-colors duration-300">
                   Fazer Login
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
               <Link to="/chatbot">
-                <Button size="lg" variant="outline" className="bg-white text-emerald-600 hover:bg-white/10 dark:text-emerald-700 dark:border-emerald-300 dark:hover:bg-emerald-900/20 font-bold text-lg px-8 transition-colors duration-300">
+                <Button size="lg" variant="outline" className="bg-white text-teal-700 hover:bg-teal-50 dark:text-teal-600 font-bold text-lg px-8 transition-colors duration-300">
                   Falar com Dr. Doug
                 </Button>
               </Link>
@@ -64,7 +64,7 @@ export default function Index() {
           <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
             <path d="M0 0L60 10C120 20 240 40 360 46.7C480 53 600 47 720 43.3C840 40 960 40 1080 46.7C1200 53 1320 67 1380 73.3L1440 80V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z" 
                   fill="currentColor" 
-                  className="text-white dark:text-emerald-900 transition-colors duration-300"/>
+                  className="text-white dark:text-teal-900 transition-colors duration-300"/>
           </svg>
         </div>
       </section>
@@ -73,7 +73,7 @@ export default function Index() {
       <section className="py-20 px-4 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-4 transition-colors duration-300">
+            <h2 className="text-3xl md:text-4xl font-bold text-teal-700 dark:text-teal-400 mb-4 transition-colors duration-300">
               Como Podemos Ajudar
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 transition-colors duration-300">
@@ -85,7 +85,7 @@ export default function Index() {
             {features.map((feature, index) => (
               <Card 
                 key={index}
-                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-emerald-200 dark:border-emerald-900 hover:border-emerald-500 dark:hover:border-emerald-400 transition-all duration-300 hover:shadow-xl"
+                className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border-2 border-teal-200 dark:border-teal-900 hover:border-teal-600 dark:hover:border-teal-400 transition-all duration-300 hover:shadow-xl"
               >
                 <CardHeader>
                   <div className="mb-4">{feature.icon}</div>
@@ -105,9 +105,9 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 transition-colors duration-300">
+      <section className="py-20 px-4 bg-gradient-to-r from-teal-100 to-cyan-100 dark:from-teal-900/20 dark:to-cyan-800/20 transition-colors duration-300">
         <div className="container mx-auto max-w-4xl text-center">
-          <Heart className="h-16 w-16 text-emerald-500 dark:text-emerald-400 mx-auto mb-6 transition-colors duration-300" />
+          <Heart className="h-16 w-16 text-teal-600 dark:text-teal-400 mx-auto mb-6 transition-colors duration-300" />
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white mb-6 transition-colors duration-300">
             Sua Saúde Mental é Prioridade
           </h2>
@@ -115,7 +115,7 @@ export default function Index() {
             Não hesite em buscar ajuda. Estamos aqui para apoiar você em todos os momentos.
           </p>
           <Link to="/dashboard">
-            <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white font-bold text-lg px-8 transition-colors duration-300">
+            <Button size="lg" className="bg-teal-600 hover:bg-teal-700 dark:bg-teal-700 dark:hover:bg-teal-600 text-white font-bold text-lg px-8 transition-colors duration-300">
               Acessar Meu Painel
             </Button>
           </Link>

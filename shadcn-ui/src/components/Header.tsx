@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-emerald-200 dark:border-emerald-900 bg-white dark:bg-gray-900 shadow-sm transition-colors duration-300">
+    <header className="sticky top-0 z-50 w-full border-b border-teal-200 dark:border-teal-900 bg-white dark:bg-gray-900 shadow-sm transition-colors duration-300">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
@@ -41,7 +41,7 @@ export const Header: React.FC = () => {
               <h1 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
                 ASAP
               </h1>
-              <p className="text-xs text-emerald-600 dark:text-emerald-400">
+              <p className="text-xs text-teal-700 dark:text-teal-400">
                 Apoio Psicológico ETEC
               </p>
             </div>
@@ -55,7 +55,7 @@ export const Header: React.FC = () => {
                 to={item.path}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(item.path)
-                    ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-100'
+                    ? 'bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-100'
                     : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
                 }`}
               >
@@ -99,7 +99,7 @@ export const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-2 border-t border-emerald-200 dark:border-emerald-900 pt-4">
+          <nav className="md:hidden mt-4 pb-4 flex flex-col gap-2 border-t border-teal-200 dark:border-teal-900 pt-4">
             {NAV_ITEMS.map((item) => (
               <Link
                 key={item.path}
@@ -107,7 +107,7 @@ export const Header: React.FC = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   isActive(item.path)
-                    ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-100'
+                    ? 'bg-teal-100 text-teal-700 dark:bg-teal-900 dark:text-teal-100'
                     : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
                 }`}
               >

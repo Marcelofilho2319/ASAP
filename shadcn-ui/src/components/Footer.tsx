@@ -52,17 +52,17 @@ export const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
               <li>
-                <a href="/" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="/" className="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
                   Início
                 </a>
               </li>
               <li>
-                <a href="/team" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="/team" className="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
                   Nossa Equipe
                 </a>
               </li>
               <li>
-                <a href="/articles" className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                <a href="/articles" className="hover:text-teal-700 dark:hover:text-teal-400 transition-colors">
                   Artigos
                 </a>
               </li>

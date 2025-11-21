@@ -12,7 +12,7 @@ export default function Articles() {
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-[#1f8d50] dark:text-green-400 mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-teal-700 dark:text-teal-400 mb-4">
             Conteúdo Educativo
           </h1>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -28,8 +28,8 @@ export default function Articles() {
               variant={category === 'Todos' ? 'default' : 'outline'}
               className={`cursor-pointer px-4 py-2 text-sm ${
                 category === 'Todos' 
-                  ? 'bg-[#1f8d50] hover:bg-[#15703d] text-white' 
-                  : 'hover:bg-[#1f8d50] hover:text-white border-[#1f8d50]'
+                  ? 'bg-teal-600 hover:bg-teal-700 text-white' 
+                  : 'hover:bg-teal-600 hover:text-white border-teal-600'
               }`}
             >
               {category}
@@ -54,7 +54,7 @@ export default function Articles() {
                   }}
                 />
                 <div className="absolute top-3 right-3">
-                  <Badge className="bg-[#1f8d50] text-white">
+                  <Badge className="bg-teal-600 text-white">
                     {article.category}
                   </Badge>
                 </div>
@@ -81,7 +81,7 @@ export default function Articles() {
 
                 <div className="flex gap-2">
                   <Button 
-                    className="flex-1 bg-[#1f8d50] hover:bg-[#15703d] text-white"
+                    className="flex-1 bg-teal-600 hover:bg-teal-700 text-white"
                     size="sm"
                   >
                     <BookOpen className="h-4 w-4 mr-2" />
@@ -91,7 +91,7 @@ export default function Articles() {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="border-[#1f8d50] text-[#1f8d50] hover:bg-[#1f8d50] hover:text-white"
+                      className="border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white"
                     >
                       <Video className="h-4 w-4" />
                     </Button>
@@ -143,18 +143,7 @@ export default function Articles() {
           </Card>
         </div>
 
-        {/* Espaço para API */}
-        <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-          <p className="text-sm text-blue-800 dark:text-blue-200 font-mono">
-            {`// TODO: Conectar com API de conteúdo`}
-            <br />
-            {`// - Sistema de CMS para gerenciar artigos e vídeos`}
-            <br />
-            {`// - Filtros dinâmicos por categoria`}
-            <br />
-            {`// - Sistema de busca e recomendações personalizadas`}
-          </p>
-        </div>
+
       </div>
     </div>
   );

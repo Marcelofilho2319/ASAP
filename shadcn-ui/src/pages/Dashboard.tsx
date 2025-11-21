@@ -15,19 +15,19 @@ export default function Dashboard() {
     <div className="min-h-screen py-8 px-4">
       <div className="container mx-auto max-w-7xl space-y-8">
         {/* Header com perfil */}
-        <Card className="bg-gradient-to-r from-[#1f8d50] to-[#15703d] text-white border-none shadow-xl">
+        <Card className="bg-gradient-to-r from-teal-600 to-teal-700 text-white border-none shadow-xl">
           <CardContent className="pt-6">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <Avatar className="h-24 w-24 border-4 border-white shadow-lg">
                 <AvatarImage src={mockStudent.profilePicture} alt={mockStudent.name} />
-                <AvatarFallback className="text-2xl bg-white text-[#1f8d50]">
+                <AvatarFallback className="text-2xl bg-white text-teal-600">
                   {mockStudent.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
               
               <div className="flex-1 text-center md:text-left space-y-2">
                 <h1 className="text-3xl font-bold">{mockStudent.name}</h1>
-                <div className="flex flex-col md:flex-row gap-4 text-green-100">
+                <div className="flex flex-col md:flex-row gap-4 text-teal-100">
                   <div className="flex items-center gap-2 justify-center md:justify-start">
                     <User className="h-4 w-4" />
                     <span>RM: {mockStudent.rm}</span>
@@ -41,11 +41,11 @@ export default function Dashboard() {
                     <span>{mockStudent.grade}</span>
                   </div>
                 </div>
-                <p className="text-sm text-green-100">{mockStudent.email}</p>
+                <p className="text-sm text-teal-100">{mockStudent.email}</p>
               </div>
 
               <Link to="/chatbot">
-                <Button size="lg" className="bg-white text-[#1f8d50] hover:bg-green-50 font-semibold">
+                <Button size="lg" className="bg-white text-teal-600 hover:bg-teal-50 font-semibold">
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Falar com Dr. Doug
                 </Button>
@@ -61,10 +61,10 @@ export default function Dashboard() {
               <CardTitle className="text-sm font-medium text-gray-600 dark:text-gray-300">
                 Sessões Este Mês
               </CardTitle>
-              <Calendar className="h-5 w-5 text-[#1f8d50]" />
+              <Calendar className="h-5 w-5 text-teal-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-[#1f8d50] dark:text-green-400">
+              <div className="text-3xl font-bold text-teal-600 dark:text-teal-400">
                 {currentMonth.sessions}
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -78,10 +78,10 @@ export default function Dashboard() {
               <CardTitle className="text-sm font-medium text-gray-600 dark:text-gray-300">
                 Nota Média Mensal
               </CardTitle>
-              <Award className="h-5 w-5 text-[#1f8d50]" />
+              <Award className="h-5 w-5 text-teal-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-[#1f8d50] dark:text-green-400">
+              <div className="text-3xl font-bold text-teal-600 dark:text-teal-400">
                 {averageScore.toFixed(1)}
               </div>
               <Progress value={averageScore * 10} className="mt-2" />
@@ -96,10 +96,10 @@ export default function Dashboard() {
               <CardTitle className="text-sm font-medium text-gray-600 dark:text-gray-300">
                 Tendência
               </CardTitle>
-              <TrendingUp className="h-5 w-5 text-[#1f8d50]" />
+              <TrendingUp className="h-5 w-5 text-teal-600" />
             </CardHeader>
             <CardContent>
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+              <div className="text-3xl font-bold text-teal-600 dark:text-teal-400">
                 +0.5
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -128,7 +128,7 @@ export default function Dashboard() {
                   <XAxis dataKey="month" />
                   <YAxis />
                   <Tooltip />
-                  <Bar dataKey="sessions" fill="#1f8d50" radius={[8, 8, 0, 0]} />
+                  <Bar dataKey="sessions" fill="#5DC1B9" radius={[8, 8, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
             </CardContent>
@@ -154,9 +154,9 @@ export default function Dashboard() {
                   <Line 
                     type="monotone" 
                     dataKey="averageScore" 
-                    stroke="#1f8d50" 
+                    stroke="#5DC1B9" 
                     strokeWidth={3}
-                    dot={{ fill: '#1f8d50', r: 6 }}
+                    dot={{ fill: '#5DC1B9', r: 6 }}
                   />
                 </LineChart>
               </ResponsiveContainer>
@@ -165,7 +165,7 @@ export default function Dashboard() {
         </div>
 
         {/* Informações adicionais */}
-        <Card className="bg-gradient-to-r from-blue-50 to-green-50 dark:from-gray-800 dark:to-gray-900 border-2 border-[#1f8d50]/20">
+        <Card className="bg-gradient-to-r from-teal-50 to-cyan-50 dark:from-gray-800 dark:to-gray-900 border-2 border-teal-200/20">
           <CardHeader>
             <CardTitle className="text-xl text-gray-800 dark:text-white">
               Como Funciona a Avaliação
@@ -187,18 +187,7 @@ export default function Dashboard() {
           </CardContent>
         </Card>
 
-        {/* Espaço para API */}
-        <div className="p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-          <p className="text-sm text-blue-800 dark:text-blue-200 font-mono">
-            {`// TODO: Conectar com APIs reais`}
-            <br />
-            {`// - Microsoft Graph API para foto de perfil`}
-            <br />
-            {`// - API de dados do aluno (RM, curso, série)`}
-            <br />
-            {`// - API de histórico de atendimentos`}
-          </p>
-        </div>
+
       </div>
     </div>
   );

@@ -57,7 +57,7 @@ export default function Login() {
                 }}
               />
             </div>
-            <CardTitle className="text-3xl font-bold text-[#1f8d50] dark:text-green-400">
+            <CardTitle className="text-3xl font-bold text-teal-600 dark:text-teal-400">
               Login ASAP
             </CardTitle>
             <CardDescription className="text-base">
@@ -82,7 +82,7 @@ export default function Login() {
 
               <Button
                 type="submit"
-                className="w-full bg-[#1f8d50] hover:bg-[#15703d] text-white font-semibold text-base py-6"
+                className="w-full bg-teal-600 hover:bg-teal-700 text-white font-semibold text-base py-6"
                 disabled={isLoading}
               >
                 {isLoading ? (
@@ -102,8 +102,8 @@ export default function Login() {
             </form>
 
             {showMessage && (
-              <Alert className="bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800">
-                <AlertDescription className="text-green-800 dark:text-green-200">
+              <Alert className="bg-teal-50 dark:bg-teal-900/20 border-teal-200 dark:border-teal-800">
+                <AlertDescription className="text-teal-800 dark:text-teal-200">
                   Login realizado com sucesso! Redirecionando...
                 </AlertDescription>
               </Alert>
@@ -132,14 +132,7 @@ export default function Login() {
           </CardContent>
         </Card>
 
-        {/* Espaço para API futura */}
-        <div className="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
-          <p className="text-sm text-blue-800 dark:text-blue-200 font-mono">
-            {`// TODO: Implementar Microsoft OAuth API`}
-            <br />
-            {`// Endpoint: ${window.location.origin}/api/auth/microsoft`}
-          </p>
-        </div>
+
       </div>
     </div>
   );
