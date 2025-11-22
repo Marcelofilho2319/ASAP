@@ -117,14 +117,6 @@ export default function Team() {
             ))}
           </div>
         </div>
-
-        {/* Nota sobre personalização */}
-        <div className="mt-12 p-6 bg-teal-50 dark:bg-teal-900/20 rounded-lg border-2 border-teal-200 dark:border-teal-800 transition-colors duration-300">
-          <p className="text-sm text-teal-900 dark:text-teal-200 text-center transition-colors duration-300">
-            <strong>Nota:</strong> Os nomes e fotos acima são exemplos. Substitua com os dados reais 
-            da sua equipe editando o arquivo <code className="bg-teal-100 dark:bg-teal-900 px-2 py-1 rounded">src/lib/mockData.ts</code>
-          </p>
-        </div>
       </div>
     </div>
   );
